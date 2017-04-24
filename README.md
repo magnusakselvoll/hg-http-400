@@ -63,3 +63,9 @@ For advance usage, run `.\Merge-HGClosedHeads.ps1 -?`
 To avoid this problem in the future we recommend:
 * Close branches before you merge them to other branches
 * Either immediately merge any abandoned branches to your .graveyard branch by using the methods described above, or peridically use the scripts presented in this article.
+
+# Links and references
+* The problem is well described here: <http://barahilia.github.io/blog/computers/2014/10/09/hg-pull-via-http-fails-400.html>
+* This issue at Bitbucket recognizes the problem: <https://bitbucket.org/site/master/issues/8263/http-400-bad-request-error-when-pulling>
+* These are the official recmomendations from Mercurial on how to prune branches: <https://www.mercurial-scm.org/wiki/PruningDeadBranches>
+* Advanced Mercurial debugging: <https://medium.com/@demianbrecht/advanced-mercurial-debugging-58d80b5305b2>
