@@ -34,7 +34,7 @@ To get your repository working again, you need to merge all those unwanted heads
 * For each unwanted branch do the following
   * Update to your .graveyard branch: `hg update --clean --rev .graveyard`
   * Merge the branch into your .graveyard branch: `hg merge --rev SOME_CHANGESET --tool :local`
-  * Revert all the changes to your .graveyard branch: `revert --all --rev .graveyard`
+  * Revert all the changes to your .graveyard branch: `hg revert --all --rev .graveyard`
   * Commit your changes: `hg commit --message "Eliminating closed head SOME_CHANGESET by merging to .graveyard"`
 * If everything seems correct, push your changes to the central repository: `hg push`
 
