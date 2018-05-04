@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$repositoryPath,
     [string]$hgExecutable = "hg.exe",
-    [bool]$disablePull = $false
+    [bool]$hgPull = $false
 )
 
 . .\CommonHGFunctions.ps1 $repositoryPath $hgExecutable
@@ -53,7 +53,7 @@ function ConvertTo-LogObject
     return $logObjects
 }
 
-if (-not $disablePull)
+if ($hgPull)
 {
     Invoke-HG "pull"
     Write-Host
